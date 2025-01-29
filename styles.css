@@ -1,0 +1,621 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inconsolata', monospace;
+    background: url('background-desktop.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 auto 10px auto;
+    max-width: 400px;
+    word-wrap: break-word;
+  }
+  
+  p {
+    font-size: 0.7rem;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .form-container {
+    text-align: left;
+    padding: 0 120px;
+  }
+  
+  .upload-avatar {
+    background: rgb(43, 38, 94, 0.6);
+    border: 1px dashed hsl(0, 0%, 50%);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  
+  .upload-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #ccc;
+  }
+
+  .upload-label span {
+    font-size: 0.8rem;
+  }
+  
+  .upload-icon {
+    width: 30px;
+    margin-bottom: 10px;
+    padding: 3px;
+    background-color: hsl(244, 24%, 43%);
+    border-radius: 5px;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .upload-instructions {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    color: #aaa;
+    margin-top: 0;
+  }
+
+  .upload-instructions img {
+    margin-right: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    border: 0.5px solid #ccc;
+    border-radius: 5px;
+    background-color:  rgb(43, 38, 94, 0.6);
+    color: #fff;
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: #ccc;
+    font-size: 0.7rem;
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: hsl(248, 70%, 10%);
+    background: hsl(7, 71%, 60%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background: hsl(14, 81%, 55%);
+  }
+
+  .image {
+    position: fixed;
+    z-index: -1;
+  }
+
+  .image-1 {
+    top: 20px;
+    right: 0;
+    width: 150px;
+    height: auto;
+  }
+
+  .image-2 {
+    bottom: 105px;
+    left: 0;
+    width: 350px;
+    height: 450px;
+  } 
+
+  .image-3 {
+    top: 0;
+    width: 100%;
+    height: auto;
+    left: 0;
+    right: 0;
+  }
+
+  .image-4 {
+    top: 30%;
+    width: 150px;
+    right: 55px;
+  }
+
+  .container-2 {
+    margin-top: 10px;
+    padding-bottom: 30px;
+    display: none;
+  }
+
+  .container-2 p {
+    margin-bottom: 60px;
+    color: whitesmoke;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin: 0 auto 20px auto;
+    max-width: 410px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .note {
+    max-width: 238px;
+    word-wrap: break-word;
+    margin: 0 auto;
+  }
+
+  .ticket-frame {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .ticket {
+    width: 100%;
+  }
+
+  .client-email,
+  .client-name {
+    color: hsl(14, 81%, 55%);
+  }
+
+  .ticket-details {
+    position: absolute;
+   top: 3%;
+   left: 2%;
+   width: 70%;
+   text-align: center;
+  }
+
+  .ticket-details img {
+    position: absolute;
+    width: 170px;
+    top: 10px;
+    left: 5px;
+  } 
+
+  .date-address {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    font-size: 0.7rem;
+    padding-left: 40px;
+    color:  hsl(252, 6%, 83%);
+    opacity: 0.6;
+  }
+
+  .ticket-number {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: rotate(90deg);
+    white-space: nowrap;
+    color:  hsl(252, 6%, 83%);
+    opacity: 0.5;
+  }
+
+  .down-box {
+    position: absolute;
+    top: 105px;
+    width: 100%;
+  }
+
+  .down-box img {
+    width: 40px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+
+  .name {
+    font-size: 1rem;
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    color: #fff;
+  }
+
+  .github img {
+    width: 15px;
+    position: absolute;
+    top: 45px;
+    left: 50px;
+  }
+
+  .github span {
+    position: absolute;
+    top: 47px;
+    left: 70px;
+  }
+
+  .exclamation {
+    color: whitesmoke;
+  }
+
+  .preview-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-2 {
+  bottom: 220px;
+  left: -40px;
+}
+
+@media (min-width: 1024px) {
+  .image-1 {
+    right: 17%;
+    top: 5%;
+  }
+
+  .image-2 {
+    left: 25%;
+    bottom: 15%;
+  }
+
+  .image-4 {
+    right: 30%;
+    top: 30%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  body {
+      background-size: cover;
+      justify-content: flex-start;
+      align-items: center;
+      height: auto;
+      padding: 20px;
+  }
+
+  .container {
+      width: 95%;
+      max-width: 100%;
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 1.5rem;
+      max-width: 300px;
+  }
+
+  p {
+      font-size: 0.8rem;
+  }
+
+  input {
+      padding: 8px;
+      font-size: 0.7rem;
+  }
+
+  .submit-button {
+      padding: 12px;
+      font-size: 0.9rem;
+  }
+
+  .upload-avatar {
+      padding: 10px;
+  }
+
+  .preview-image {
+      width: 80px;
+      height: 80px;
+  }
+
+  .container-2 h2 {
+      font-size: 1.5rem;
+      max-width: 350px;
+  }
+
+  .note {
+      font-size: 0.8rem;
+  }
+
+  .ticket-frame {
+      max-width: 350px;
+  }
+
+  .ticket-details img {
+      width: 140px;
+  }
+
+  .down-box img {
+      width: 40px;
+      top: 30px;
+  }
+
+  .down-box {
+    top: 75px;
+    left: 5px;
+  }
+
+  .name {
+      font-size: 0.9rem;
+      top: 35px;
+  }
+
+  .github img {
+      width: 12px;
+      top: 55px;
+  }
+
+  .github span {
+      font-size: 0.8rem;
+      top: 55px;
+  }
+
+  .ticket-number {
+    right: 5px;
+  }
+} 
+
+
+@media (max-width: 480px) {
+  .logo {
+    width: 150px !important;
+  }
+
+  h1 {
+      font-size: 1.3rem;
+      max-width: 250px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  h2 {
+    max-width: 270px !important;
+  }
+
+  p {
+      font-size: 0.9rem; 
+  }
+
+  .word {
+    max-width: 250px;
+      margin: 0 auto;
+  }
+
+  .container {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .form-container {
+      padding: 0 20px;
+  }
+
+  input {
+      padding: 10px;
+      font-size: 0.7rem;
+  }
+
+  .submit-button {
+      font-size: 0.8rem;
+  }
+
+  .preview-image {
+      width: 70px;
+      height: 70px;
+  }
+
+  .ticket-frame {
+      max-width: 300px;
+  }
+
+  .date-address {
+      font-size: 0.8rem;
+      padding-left: 42px;
+  }
+
+  .down-box {
+    top: 55px;
+    left: 5px;
+  }
+
+  .name {
+      font-size: 0.8rem;
+  }
+
+  .github img {
+      width: 13px;
+  }
+
+  .github span {
+      font-size: 0.8rem;
+      left: 65px;
+  }
+
+  .ticket-number {
+    right: 5px;
+    top: 50%;
+  }
+
+  .image-1 {
+    width: 120px;
+    right: 30px;
+    top: 10px;
+  }
+
+  .image-4 {
+    top: 45%;
+    right: -50px;
+    overflow: hidden;
+  }
+
+  .note {
+    font-size: 1rem;
+    max-width: 300px;
+  }
+
+  .image-2 {
+    bottom: 145px;
+    left: -80px;
+  }
+
+  .upload-instructions {
+   margin-bottom: 10px;
+  }
+}
+ 
+
+
+@media screen and (max-width: 375px) {
+  .logo {
+    width: 150px !important;
+  }
+
+  h1 {
+      font-size: 1.3rem;
+  }
+
+  h2 {
+    max-width: 270px !important;
+  }
+
+  p {
+    font-size: 0.9rem; 
+}
+
+.word {
+  max-width: 250px;
+    margin: 0 auto;
+}
+
+  .container {
+      width: 100%;
+      padding: 5px;
+  }
+
+  .form-container {
+      padding: 0 5px;
+  }
+
+  input {
+      padding: 7px;
+      font-size: 0.7rem;
+  }
+
+  .submit-button {
+      font-size: 0.8rem;
+  }
+
+  .preview-image {
+      width: 70px;
+      height: 70px;
+  }
+
+  .ticket-frame {
+      max-width: 300px;
+  }
+
+  .date-address {
+      font-size: 0.8rem;
+      padding-left: 42px;
+  }
+
+  .down-box {
+    top: 55px;
+    left: 5px;
+  }
+
+  .name {
+      font-size: 0.8rem;
+  }
+
+  .github img {
+      width: 13px;
+  }
+
+  .github span {
+      font-size: 0.8rem;
+      left: 65px;
+  }
+
+  .ticket-number {
+    right: 5px;
+    top: 50%;
+  }
+
+  .image-1 {
+    width: 120px;
+    right: 30px;
+    top: 10px;
+  }
+
+  .image-4 {
+    top: 45%;
+    right: -50px;
+    overflow: hidden;
+  }
+
+  .note {
+    font-size: 1rem;
+    max-width: 300px;
+  }
+
+  .image-2 {
+    bottom: 180px;
+    left: -90px;
+  }
+  
+  
+}
