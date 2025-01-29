@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700;800&display=swap" rel="stylesheet">
+        <title>Coding Conf 2025</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="logo-full.svg" alt="Coding Conf Logo" class="logo">
+      <h1 class="none">Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p class="none word">Secure your spot at next year’s biggest coding conference.</p>
+    </header>
+
+    <main class="form-container none">
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <label for="">Upload Avatar</label>
+        <div class="upload-avatar">
+          <label for="avatar" class="upload-label">
+            <img src="icon-upload.svg" alt="Upload Icon" class="upload-icon">
+            <span>Drag and drop or click to upload</span>
+          </label>
+          <input type="file" id="avatar" name="avatar" accept="image/*" class="file-input">
+        </div>
+        <p class="upload-instructions"> <span><img src="icon-info.svg" alt=""></span>Upload your photo (JPG or PNG, max size: 500KB).</p>
+
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" placeholder="" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="github">GitHub Username</label>
+          <input type="text" id="github" name="github" placeholder="@yourusername" required>
+        </div>
+
+        <button type="submit" class="submit-button">Generate My Ticket</button>
+      </form>
+    </main>
+
+    <img src="pattern-squiggly-line-top.svg" alt="" class="image image-1">
+    <img src="pattern-squiggly-line-bottom-desktop.svg" alt="" class="image image-2">
+    <img src="pattern-lines.svg" alt="" class="image image-3">
+    <img src="pattern-circle.svg" alt="" class="image image-4">
+
+    <div class="container-2">
+        <h2>Congrats, <span class="client-name"></span> Your ticket is ready.</h2>
+        <p class="note">We've emailed your ticket to <span class="client-email"></span> and will send updates in the run up to the event.</p>
+        <div class="ticket-frame">
+            <img src="pattern-ticket.svg" alt="" class="ticket">
+            <span class="ticket-number"></span>
+
+            <div class="ticket-details">
+                <img src="logo-full.svg" alt="Coding Conf Logo" class="logo-t">
+                <span class="date-address">Jan 31, 2025 / Enugu, NG</span>
+                <div class="down-box">
+                  <img src="" alt="" class="client-image">
+                  <div>
+                    <p class="name"></p>
+                    <p class="github"><img src="icon-github.svg" alt="" ><span></span></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
