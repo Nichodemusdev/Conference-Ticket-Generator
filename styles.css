@@ -105,7 +105,7 @@
     color: #ccc;
   }
   
-  input {
+ input {
     width: 100%;
     max-width: 100%; 
     padding: 10px;
@@ -116,8 +116,9 @@
     background-color: rgb(43, 38, 94, 0.6);
     color: #fff;
     outline: none;
-    box-sizing: border-box;
-  }
+    box-sizing: border-box; 
+}
+
   
   input::placeholder {
     color: #ccc;
@@ -347,8 +348,10 @@
   input {
       padding: 8px;
       font-size: 0.7rem;
+      width: 100%;
+      max-width: 100%; 
   }
-
+ 
   .submit-button {
       padding: 12px;
       font-size: 0.9rem;
@@ -445,11 +448,11 @@
       padding: 0 20px;
   }
 
-  input {
-      padding: 10px;
+ input {
+      padding: 7px;
       font-size: 0.7rem;
       width: 100%;
-      max-width: 400px;
+      max-width: 100%; 
   }
 
   .submit-button {
@@ -522,7 +525,8 @@
  
 
 
-@media screen and (max-width: 375px) {
+@media (max-width: 375px) {
+ 
   .logo {
     width: 150px !important;
   }
@@ -622,7 +626,6 @@
     bottom: -23px;
     left: -95px;
   }
-  
   
 } 
 
