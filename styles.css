@@ -435,7 +435,8 @@
   }
 
   .container {
-      width: 100%;
+      max-width: 100%;
+    overflow: hidden;
       padding: 5px;
   }
 
@@ -446,6 +447,7 @@
   input {
       padding: 10px;
       font-size: 0.7rem;
+     min-width: 90%; 
   }
 
   .submit-button {
@@ -507,7 +509,7 @@
   }
 
   .image-2 {
-    bottom: 145px;
+     bottom: -42px;
     left: -80px;
   }
 
@@ -541,7 +543,8 @@
 }
 
   .container {
-      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
       padding: 5px;
   }
 
@@ -550,8 +553,9 @@
   }
 
   input {
-      padding: 7px;
+       padding: 7px;
       font-size: 0.7rem;
+     min-width: 90%; 
   }
 
   .submit-button {
@@ -613,8 +617,8 @@
   }
 
   .image-2 {
-    bottom: 180px;
-    left: -90px;
+    bottom: -23px;
+    left: -95px;
   }
   
   
