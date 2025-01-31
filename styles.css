@@ -1,4 +1,4 @@
-
+ 
 * {
     margin: 0;
     padding: 0;
@@ -107,14 +107,16 @@
   
   input {
     width: 100%;
+    max-width: 100%; 
     padding: 10px;
     font-size: 0.8rem;
     margin-top: 5px;
     border: 0.5px solid #ccc;
     border-radius: 5px;
-    background-color:  rgb(43, 38, 94, 0.6);
+    background-color: rgb(43, 38, 94, 0.6);
     color: #fff;
     outline: none;
+    box-sizing: border-box;
   }
   
   input::placeholder {
@@ -435,8 +437,7 @@
   }
 
   .container {
-      max-width: 100%;
-    overflow: hidden;
+      width: 100%;
       padding: 5px;
   }
 
@@ -447,7 +448,8 @@
   input {
       padding: 10px;
       font-size: 0.7rem;
-     min-width: 90%; 
+      width: 100%;
+      max-width: 400px;
   }
 
   .submit-button {
@@ -509,7 +511,7 @@
   }
 
   .image-2 {
-     bottom: -42px;
+    bottom: -42px;
     left: -80px;
   }
 
@@ -543,8 +545,7 @@
 }
 
   .container {
-      max-width: 100%;
-      overflow: hidden;
+      width: 100%;
       padding: 5px;
   }
 
@@ -553,9 +554,10 @@
   }
 
   input {
-       padding: 7px;
+      padding: 7px;
       font-size: 0.7rem;
-     min-width: 90%; 
+      width: 100%;
+      max-width: 350px;
   }
 
   .submit-button {
@@ -622,4 +624,10 @@
   }
   
   
-}
+} 
+
+
+
+
+
+ 
